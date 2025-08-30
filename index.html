@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kalkulator Colorful • UI/UX Menarik</title>
+  <link rel="stylesheet" href="Brain/css/style.css" />
+</head>
+<body>
+  <div class="shell" id="appRoot">
+    <div class="header" role="banner" aria-label="Kalkulator Colorful">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Simple Calculator by Davano Al Raffi</div>
+          <div class="tip"> Interested UI/UX • Button-friendly • history</div>
+        </div>
+      </div>
+      <div class="toggles">
+        <button class="chip" id="themeToggle" aria-pressed="false" aria-label="Toggle mode terang/gelap">
+          <span class="dot"></span> Switch Theme
+        </button>
+        <button class="chip" id="clearHistory" aria-label="Hapus riwayat">
+          🧹 Clear History
+        </button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Kalkulator -->
+      <section class="calc" aria-label="Area kalkulator">
+        <div class="display" aria-live="polite">
+          <div class="expr" id="expr" title="Ekspresi"></div>
+          <div class="result" id="result" title="Hasil">0</div>
+        </div>
+        <div class="keys" role="group" aria-label="Tombol kalkulator">
+          <!-- Baris 1 -->
+          <button class="key danger" data-action="clear">AC</button>
+          <button class="key danger" data-action="del">DEL</button>
+          <button class="key op" data-val="%">%</button>
+          <button class="key op" data-val="/">÷</button>
+          <!-- Baris 2 -->
+          <button class="key" data-val="7">7</button>
+          <button class="key" data-val="8">8</button>
+          <button class="key" data-val="9">9</button>
+          <button class="key op" data-val="*">×</button>
+          <!-- Baris 3 -->
+          <button class="key" data-val="4">4</button>
+          <button class="key" data-val="5">5</button>
+          <button class="key" data-val="6">6</button>
+          <button class="key op" data-val="-">−</button>
+          <!-- Baris 4 -->
+          <button class="key" data-val="1">1</button>
+          <button class="key" data-val="2">2</button>
+          <button class="key" data-val="3">3</button>
+          <button class="key op" data-val="+">+</button>
+          <!-- Baris 5 -->
+          <button class="key wide" data-val="0">0</button>
+          <button class="key" data-val=".">.</button>
+          <button class="key eq tall" data-action="equals">=</button>
+          <!-- Parentesis -->
+          <button class="key" data-val="(">(</button>
+          <button class="key" data-val=")">)</button>
+        </div>
+      </section>
+
+      <!-- Riwayat -->
+      <aside class="side" aria-label="Riwayat perhitungan">
+        <header>
+          <h3>History</h3>
+          <span class="tip">Click Item for fill again</span>
+        </header>
+        <div id="history" class="list" role="list">
+          <div class="empty">Not Even Calculate.</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer">Shortcut: Enter (=), Backspace (DEL), Esc (AC). • © Davano Al Raffi ✨</div>
+  </div>
+  <script src="Brain/js/script.js"></script>
+</body>
+</html>
